@@ -1,0 +1,52 @@
+{
+	"questions": [
+		{
+			"id": "1",
+			"heading": "How many years have you been with the company?",
+			"type": "range",
+			"min": 0,
+			"max": 20
+		},
+		{
+			"id": "2",
+			"heading": "Overall, how satisfied are you working for the company?",
+			"type": "radio",
+			"option": [
+				"Extremely Dissatisfied",
+				"Very Dissatisfied",
+				"Somewhat Dissatisfied",
+				"Neutral",
+				"Somewhat Satisfied",
+				"Extremely Satisfied"
+			]
+		},
+		{
+			"id": "3",
+			"heading": "Things that my comapany should do to make it a better place to work.",
+			"type": "text",
+			"option": null
+		},
+		{
+			"id": "4",
+			"heading": "In what way does your suggestion or concern best enhance the company",
+			"type": "checkbox",
+			"option": [
+				"Safety",
+				"Cost Savings",
+				"Customer Service",
+				"Teamwork Quality",
+				"Waste Reduction",
+				"Discrimination",
+				"Assets",
+				"Fair Treatment",
+				"Company Culture"
+			]
+		},
+		{
+			"id":"5",
+			"heading": "Will you recommend this company to your friends?",
+			"type": "select",
+			"option": null
+		}
+	]
+}
