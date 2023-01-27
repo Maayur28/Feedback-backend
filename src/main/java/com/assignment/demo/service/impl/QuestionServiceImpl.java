@@ -52,7 +52,7 @@ public class QuestionServiceImpl extends QuestionsAction implements QuestionServ
 
 	@Override
 	public Integer getHappiness() throws Exception {
-		Integer happiness = 3;
+		Integer happiness = 0;
 		for (int i = 1; i <= 5; i++) {
 			Questions response = questionRepository.getByQuestionId(String.valueOf(i));
 			if (i == 1) {
@@ -65,8 +65,8 @@ public class QuestionServiceImpl extends QuestionsAction implements QuestionServ
 				happiness = getSelectHappiness(response, happiness);
 			}
 		}
-		if (happiness < 0) {
-			happiness = 0;
+		if (happiness < 1) {
+			happiness = 1;
 		} else if (happiness > 5) {
 			happiness = 5;
 		}

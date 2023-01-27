@@ -37,13 +37,13 @@ public abstract class QuestionsAction {
 		if (response.getAns() != null && !response.getAns().isEmpty()) {
 			List<String> strList = createArrayListFromString(response.getAns());
 			if (Integer.parseInt(strList.get(0)) >= 5 && Integer.parseInt(strList.get(0)) <= 9) {
-				happiness += 2;
+				happiness += 1;
 			} else if (Integer.parseInt(strList.get(0)) > 9 && Integer.parseInt(strList.get(0)) <= 14) {
-				happiness += 3;
+				happiness += 2;
 			} else if (Integer.parseInt(strList.get(0)) > 14 && Integer.parseInt(strList.get(0)) <= 19) {
-				happiness += 4;
+				happiness += 3;
 			} else if (Integer.parseInt(strList.get(0)) > 19) {
-				happiness += 5;
+				happiness += 4;
 			}
 		}
 		return happiness;
@@ -53,11 +53,11 @@ public abstract class QuestionsAction {
 		if (response.getAns() != null && !response.getAns().isEmpty()) {
 			List<String> strList = createArrayListFromString(response.getAns());
 			if (strList.get(0).equals("Extremely Dissatisfied")) {
-				happiness -= 5;
-			} else if (strList.get(0).equals("Very Dissatisfied")) {
 				happiness -= 3;
-			} else if (strList.get(0).equals("Somewhat Dissatisfied")) {
+			} else if (strList.get(0).equals("Very Dissatisfied")) {
 				happiness -= 2;
+			} else if (strList.get(0).equals("Somewhat Dissatisfied")) {
+				happiness -= 1;
 			} else if (strList.get(0).equals("Somewhat Satisfied")) {
 				happiness += 1;
 			} else if (strList.get(0).equals("Extremely Satisfied")) {
